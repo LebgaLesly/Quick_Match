@@ -1,0 +1,257 @@
+
+#play{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.intro{
+    background-image: url("Images/Backgound/2.jpg");
+    
+}
+
+.instruc{
+    background-image: url("Images/Backgound/5.jpg");
+}
+
+.choose{
+    background-image: url("Images/Backgound/6.png");
+}
+
+.name{
+    position: relative;
+    background-image: linear-gradient(
+        45deg,
+        #F18F43 16.666%, 
+        #41e146 16.666%, 
+        #41e146 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #a9c648 50%, 
+        #b8d260 66.666%, 
+        #376ce0 66.666%, 
+        #45aacb 83.333%, 
+        #41e146 83.333%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+    left: 90px;
+
+}
+
+.name:hover
+    {
+        animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+    }
+    
+    @keyframes rainbow-text-simple-animation-rev {
+        0% {
+            background-size: 650%;
+        }
+        40% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 100%;
+        }
+    }
+    
+    @keyframes rainbow-text-simple-animation {
+        0% {
+            background-size: 100%;
+        }
+        80% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 650%;
+        }
+    }
+
+#ins{
+    position: relative;
+    left: 0px;
+}
+
+.intro-p{
+    position: relative;
+    color: #F18F43;
+    font-weight: bolder;
+    text-transform: uppercase;
+    top: 10px;
+}
+
+.buttons{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    top: 50px;
+}
+
+.buttons button{
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #41e146;
+    padding: 10px 5px;
+    color: whitesmoke;
+    font-weight: 900;
+    border-color: #41e146;
+}
+
+.buttons button:hover{
+    background-color: #F18F43;
+    border-color: #F18F43;
+}
+
+.buttons .btn-instr{
+    padding: 10px 15px;
+}
+
+.instructions p{
+    line-height: 30px;
+    font-weight: 600;
+    color: black;
+}
+
+/*  animals   and Profession  */
+
+.body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.ani{
+    background-image: url("Images/Backgound/12.png");
+}
+
+.prof{
+    background-image: url("Images/Backgound/13.jpg");
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+    grid-gap: 2rem;
+    perspective: 800px;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175 0.885, 0.32, 1.275);
+    box-shadow: rgba(0, 0, 0 , 0.2) 0px 5px 15px;
+    bottom: 0px;
+}   
+
+.back{
+    background-color: wheat;
+    backface-visibility: hidden;
+}
+
+
+.face ,
+.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.toggleCard {
+    transform: rotateY(180deg);
+}
+
+.face{
+    transform: rotateY(-180deg);
+}
+
+.live{
+    position: relative;
+    top: 100px;
+    right: 500px;
+    color: whitesmoke;
+}
+
+span{
+    color: rgb(255, 196, 0);
+}
+
+.li-prof{
+    color:black;
+}
+
+.li-prof span{
+     color: whitesmoke;
+}
+
+
+.ani-btn{
+    position: relative;
+    bottom: 25px;
+}
+
+/*     Media Queries     */
+
+/* For medium size devices    */
+@media screen and (max-width: 499px){
+
+    .name {
+        bottom: 30px;
+    }
+
+    .intro-p {
+        top: -20px;
+        color: whitesmoke;
+        left: 30px;
+        margin: 0px 5px;
+    }
+
+    .instructions p {
+        font-weight: 900;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows: repeat(4, 4rem);
+        grid-gap: 2rem;
+        perspective: 800px;
+    }
+
+    .live {
+        position: relative;
+        top: -90px;
+        right: 0px;
+        color: black;
+    }
+
+    .instructions p {
+        position: relative;
+        top: -20px;
+        font-weight: 900;
+        font-size: 20px;
+        text-align: start;
+        margin: 0px 5px;
+    }
+}
