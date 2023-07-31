@@ -70,7 +70,7 @@ const checkCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add('flipped');
     const flippedCards = document.querySelectorAll('.flipped')
-    const toggleCard = document.querySelectorAll('.togglecard')
+    const toggleCard = document.querySelectorAll('.toggleCard')
     //logic
     if(flippedCards.length === 2){
         if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
@@ -90,12 +90,11 @@ const checkCards = (e) => {
                 restart("Sorry, You lost  😭")
             }
         }
-        // check if game is won
-    if(toggleCard.length === 16){
+    }
+      // check if game is won
+      if(toggleCard.length === 16){
         restart("Congratulations, you Won 😉")
     }
-    }
-    
 }
 
 
