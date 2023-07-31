@@ -90,11 +90,12 @@ const checkCards = (e) => {
                 restart("Sorry, You lost  😭")
             }
         }
-    }
-    // check if game is won
+        // check if game is won
     if(toggleCard.length === 16){
         restart("Congratulations, you Won 😉")
     }
+    }
+    
 }
 
 
