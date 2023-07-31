@@ -198,11 +198,11 @@ span{
 }
 
 .li-prof{
-    color: whitesmoke;
+    color:black;
 }
 
 .li-prof span{
-     color: black;
+     color: whitesmoke;
 }
 
 
@@ -244,6 +244,10 @@ span{
         top: -90px;
         right: 0px;
         color: black;
+    }
+
+    .li-prof{
+        color: whitesmoke;
     }
 
     .instructions p {
